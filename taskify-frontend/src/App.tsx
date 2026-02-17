@@ -14,7 +14,7 @@ function App() {
   // Apply theme on mount and when it changes
   useEffect(() => {
     applyTheme(theme);
-  }, [theme]);
+  }, [theme, applyTheme]);
 
   // Check system preference on first load
   useEffect(() => {
@@ -96,7 +96,7 @@ function App() {
       {/* Footer */}
       <footer className="app-footer">
         <p>
-          Made with ❤️ • Taskify v2.0 • {new Date().getFullYear()}
+         • Taskify v2.0 • {new Date().getFullYear()}
         </p>
       </footer>
     </div>

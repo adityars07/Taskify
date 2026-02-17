@@ -14,7 +14,7 @@ function App() {
   // Apply theme on mount and when it changes
   useEffect(() => {
     applyTheme(theme);
-  }, [theme, applyTheme]);
+  }, [theme]);
 
   // Check system preference on first load
   useEffect(() => {
@@ -23,7 +23,7 @@ function App() {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setTheme(prefersDark ? 'dark' : 'light');
     }
-  }, []);
+  }, [setTheme]);
 
   const handleThemeToggle = () => {
     const themes: Array<'light' | 'dark' | 'auto'> = ['light', 'dark', 'auto'];
